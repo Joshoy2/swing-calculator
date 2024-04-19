@@ -22,15 +22,11 @@ public class App {
         meinJDialog.setSize(450,300);
         meinJDialog.add(new JLabel("Hello, World!"));
         
-        // Zur Veranschaulichung erstellen wir eine gelbe Umrandung
         Border bo = new LineBorder(Color.gray);
-        // Erstellen einer Menüleiste
         JMenuBar bar = new JMenuBar();
-        // Wir setzen die erstellte Umrandung für unsere Menüleiste
         bar.setBorder(bo);
         JMenu menu = new JMenu("Calculator");
         bar.add(menu);
-        // Menüleiste wird für den Dialog gesetzt
         meinJDialog.setJMenuBar(bar);
         
         JLabel label = new JLabel ("Numbers :D", JLabel.CENTER);
