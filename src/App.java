@@ -34,11 +34,8 @@ public class App {
         label.setHorizontalTextPosition(JLabel.LEFT);
         meinJDialog.add(label);
 
-        JPanel panel = new JPanel();
-        JButton button = new JButton("Drück mich");
-        panel.add(button);
-        meinJDialog.add(panel);    
-        //meinJDialog.pack();
+        
+        JPanel panel = new JPanel(); 
         
         JButton auswahl1 = new JButton("1");
         JButton auswahl2 = new JButton("2");
@@ -52,7 +49,12 @@ public class App {
         panel.add(auswahl2);
         panel.add(auswahl3);
 
+        panel.setVerticalAlignment(JPanel.CENTER_ALIGNMENT);
+        meinJDialog.add(panel); 
+        
+
         // Wir lassen unseren Dialog anzeigen
+        //meinJDialog.pack();
         meinJDialog.setVisible(true);
     }
 }
