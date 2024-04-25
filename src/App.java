@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 import javax.swing.border.Border;
+import javax.swing.WindowConstants.EXIT_ON_CLOSE;
 /*
 import javax.swing.JLabel;
 import java.awt.Color;
@@ -14,7 +15,24 @@ import javax.swing.border.Border;
 */
 
 public class App {
-    public static void main(String[] args) throws Exception {
+
+    private javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
+    private javax.swing.JButton[] jButton = new javax.swing.JButton[9];
+
+    public GridLayoutDemo() {
+        jPanel1.setLayout( new GridLayout( 3, 3 ) );
+        ButtonListener bl = new ButtonListener();
+        for ( int i = 0; i<9; i++ ) {
+            jButton[i] = new JButton ( "JButton" + (i+1) );
+            jButton[i].addActionListener ( bl );
+            jPanel1.add ( jButton[i] );
+        }
+        this.getContentPane().add ( jPanel1 ) ;
+        pack();
+    }
+
+
+        public static void main(String[] args) throws Exception {
 
         // Erzeugung eines neuen Dialoges 
         JDialog meinJDialog = new JDialog();
@@ -49,7 +67,7 @@ public class App {
         panel.add(auswahl2);
         panel.add(auswahl3);
 
-        panel.setVerticalAlignment(JPanel.CENTER_ALIGNMENT);
+        //panel.setVerticalAlignment(JPanel.CENTER_ALIGNMENT);
         meinJDialog.add(panel); 
         
 
